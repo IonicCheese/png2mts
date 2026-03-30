@@ -1,0 +1,8 @@
+*
+!.gitignore
+!README.md
+!/palettes/
+!/palettes/default.txt
+!/src/
+!/src/main.cpp
+!/src/stb_image.h
