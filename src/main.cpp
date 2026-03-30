@@ -106,10 +106,10 @@ public:
         std::cout << "Encoding image... [0/" << node_count << "]";
 
         for (int i = 0; i < node_count; i++) {
-            int r = image.data[i * image.channels];
-            int g = image.data[i * image.channels + 1];
-            int b = image.data[i * image.channels + 2];
-            int a = image.data[i * image.channels + 3];
+            int r = image.data[i * 4];
+            int g = image.data[i * 4 + 1];
+            int b = image.data[i * 4 + 2];
+            int a = image.data[i * 4 + 3];
             Vec4 color(r, g, b, a);
 
             std::string node = get_closest_node_name(color / 255.0f);
@@ -278,7 +278,8 @@ int main(int argc, char **argv) {
     // Image Loading
     int width, height, channels;
     stbi_set_flip_vertically_on_load(true);
-    unsigned char *data = stbi_load(args.image_path.c_str(), &width, &height, &channels, 4);
+    unsigned char *data = stbi_load(args.image_path.c_str(), &width, &height,
+                                    &channels, 4);
     if (!data) {
         std::cerr << "Error in loading the image" << std::endl;
         std::cerr << stbi_failure_reason() << std::endl;
