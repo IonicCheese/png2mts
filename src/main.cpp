@@ -106,6 +106,8 @@ public:
         std::cout << "Encoding image... [0/" << node_count << "]";
 
         for (int i = 0; i < node_count; i++) {
+            std::cout << "\rEncoding image... [" << i + 1<< "/" << node_count << "]" << std::flush;
+            
             int r = image.data[i * 4];
             int g = image.data[i * 4 + 1];
             int b = image.data[i * 4 + 2];
@@ -124,8 +126,6 @@ public:
             }
 
             image_nodes.push_back(iterator->second);
-
-            std::cout << "\rEncoding image... [" << i << "/" << node_count << "]" << std::flush;
         }
 
         std::cout << std::endl << "Encoding Schematic...";
