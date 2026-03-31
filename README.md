@@ -23,7 +23,7 @@ openSUSE:
 sudo zypper install gcc-c++
 ```
 
-Arch (btw):
+Arch:
 ```
 sudo pacman -S base-devel
 ```
