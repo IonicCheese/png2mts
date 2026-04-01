@@ -47,7 +47,9 @@ g++ -o png2mts -lz -O3 src/main.cpp
 ```
 
 # How to use
-```
-./png2mts -i <image>.png -o <schematic file>.mts
-```
-This will create a schematic using nodes from the `default` mod. To use a different color file, use `-p <file>`
+First you need a image to convert. (keep the size <500px in any axis unless your crazy or want even more detail)
+And second you need [Minetest/Luanti](https://github.com/luanti-org/luanti) and a way to load schematics (i recemmend [Worldedit](https://github.com/Uberi/Minetest-WorldEdit))
+
+Run `png2mts --image <your image path here> --output <your output path here>` (e.g `png2mts --image ~/luanti-64.png --output ~/luanti-64.mts`) and move the resulting .mts file to your Luanti world's schematic directory (generally at `~/.minetest/worlds/<world name>/schems`)
+
+Run Luanti and load the schematic and profit!
