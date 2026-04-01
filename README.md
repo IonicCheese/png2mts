@@ -50,6 +50,7 @@ g++ -o png2mts -lz -O3 src/main.cpp
 First you need a image to convert. (keep the size <500px in any axis unless your crazy or want even more detail)
 And second you need [Minetest/Luanti](https://github.com/luanti-org/luanti) and a way to load schematics (i recemmend [Worldedit](https://github.com/Uberi/Minetest-WorldEdit))
 
-Run `png2mts --image <your image path here> --output <your output path here>` (e.g `png2mts --image ~/luanti-64.png --output ~/luanti-64.mts`) and move the resulting .mts file to your Luanti world's schematic directory (generally at `~/.minetest/worlds/<world name>/schems`)
+Run `png2mts -i <your image path here> -o <your output path here>` and move the resulting .mts file to your Luanti world's schematic directory (generally at `~/.minetest/worlds/<world name>/schems`)
+(example: `png2mts -i ~/luanti.png -o ~/.minetest/worlds/world/schems/luanti.mts`. do be warned that the default color palette is configured to use [Minetest game](https://github.com/luanti-org/minetest_game). you can change palette with `-p <palette path>`)
 
-Run Luanti and load the schematic and profit!
+Run Luanti, load the schematic, and profit!

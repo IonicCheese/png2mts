@@ -1,6 +1,8 @@
 *
 !.gitignore
 !README.md
+!/docs/
+!/docs/palettes.md
 !/palettes/
 !/palettes/default.txt
 !/palettes/all.txt

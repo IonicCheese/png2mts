@@ -364,7 +364,7 @@ int main(int argc, char **argv) {
     std::ifstream palette_file(args.palette_path.c_str());
     std::string line;
     while (std::getline(palette_file, line)) {
-        std::regex regex("^([\\S^#]+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)[\\s+]?(\\d+)?$");
+        std::regex regex("^([\\S^#]+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)[\\s+]?(\\d+)?");
         std::smatch match;
         if (std::regex_match(line, match, regex)) {
             std::string name = match[1].str();
