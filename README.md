@@ -43,7 +43,7 @@ good luck have fun (PRs welcome)
 
 ### Compiling:
 ```
-g++ -o png2mts -lz -O3 src/main.cpp
+g++ -O3 src/main.cpp -o png2mts -lz
 ```
 
 # How to use
